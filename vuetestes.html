@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Testes com VueJS</title>
+</head>
+<body>
+    <div id="container">
+        <h1 class="text-center">{{ titulo }}</h1>
+
+        <span title="Você carregou esta página em 20/09/2018 09:30:34">
+            <p>Pare o mouse sobre mim e veja a dica interligada dinamicamente!</p>
+        </span>
+        <span :title="message">
+            <p>Pare o mouse sobre mim e veja a dica interligada dinamicamente!</p>
+        </span>
+
+        <form action="">
+            <input type="text" :placeholder="inputvalue">
+            <input type="text" v-model="inputvalue">
+        </form>
+
+        <p v-if="seen">Agora você me viu</p>
+        <button @click="esconder">{{ button_name }}</button>
+
+        <ul>
+            <li v-for="todo in todos">
+                {{ todo.text }}
+            </li>
+        </ul>
+    </div>
+
+    <div id="chat" class="d-none">
+        {{ titulo }}
+    </div>
+
+
+
+    <script src="static/js/bootstrap.min.js"></script>
+    <script src="static/js/vue.js"></script>
+    <script src="static/js/general.js"></script>
+</body>
+</html>
