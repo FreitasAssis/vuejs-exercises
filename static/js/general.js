@@ -1,3 +1,7 @@
+Vue.component('top-bar',{
+    template: "#menu"
+});
+
 let cont = 0;
 
 let container = new Vue({

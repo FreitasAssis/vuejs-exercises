@@ -7,6 +7,8 @@
 </head>
 <body>
     <div id="container">
+        <top-bar class="text-center d-flex flex-row justify-content-around align-items-center"></top-bar>
+
         <h1 class="text-center">{{ titulo }}</h1>
 
         <span title="Você carregou esta página em 20/09/2018 09:30:34">
@@ -34,6 +36,16 @@
     <div id="chat" class="d-none">
         {{ titulo }}
     </div>
+
+    <!--TEMPLATES-->
+    <template id="menu">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="#">Home</a></li>
+            <li class="list-group-item"><a href="#">Sobre</a></li>
+            <li class="list-group-item"><a href="#">Links</a></li>
+            <li class="list-group-item"><a href="#">Contato</a></li>
+        </ul>
+    </template>
 
 
 
