@@ -7,7 +7,14 @@
 </head>
 <body>
     <div id="container">
-        <top-bar class="text-center d-flex flex-row justify-content-around align-items-center"></top-bar>
+        <top-bar :style="menu_style" class="text-center d-flex flex-row justify-content-around align-items-center"></top-bar>
+
+        <select id="select" class="custom-select col-2 m-4" @change="change_color">
+            <option selected>Select color</option>
+            <option value="1">Gray</option>
+            <option value="2">Yellow</option>
+            <option value="3">Green</option>
+        </select>
 
         <h1 class="text-center">{{ titulo }}</h1>
 

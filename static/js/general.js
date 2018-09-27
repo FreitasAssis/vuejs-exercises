@@ -17,6 +17,9 @@ let container = new Vue({
             { text: 'Criar algo incrível' }
         ],
         button_name: "Aperte para esconder",
+        menu_style: {
+            background: "#fafafa"
+        },
     },
     methods: {
         esconder: function () {
@@ -30,6 +33,21 @@ let container = new Vue({
                 this.button_name = "Aperte para esconder";
                 cont--;
             }
+        },
+        change_color: function () {
+            let e = document.getElementById("select");
+            let bkgColor = e.options[e.selectedIndex].text;
+            console.log(bkgColor);
+            if (bkgColor === "Gray") {
+                this.menu_style.background = "grey";
+            }
+            else if (bkgColor === "Yellow") {
+                this.menu_style.background = "yellow";
+            }
+            else if (bkgColor === "Green") {
+                this.menu_style.background = "green";
+            }
+            else { this.menu_style.background = "#fafafa"; }
         }
     }
 });
