@@ -17,8 +17,12 @@ let container = new Vue({
             { text: 'Criar algo incrível' }
         ],
         button_name: "Aperte para esconder",
+        select_option_default: "Select color",
         menu_style: {
             background: "#fafafa"
+        },
+        body_style: {
+            background: "#fff"
         },
     },
     methods: {
@@ -37,17 +41,26 @@ let container = new Vue({
         change_color: function () {
             let e = document.getElementById("select");
             let bkgColor = e.options[e.selectedIndex].text;
-            console.log(bkgColor);
             if (bkgColor === "Gray") {
+                this.select_option_default = "Default";
                 this.menu_style.background = "grey";
+                this.body_style.background = "purple";
             }
             else if (bkgColor === "Yellow") {
+                this.select_option_default = "Default";
                 this.menu_style.background = "yellow";
+                this.body_style.background = "orange";
             }
             else if (bkgColor === "Green") {
+                this.select_option_default = "Default";
                 this.menu_style.background = "green";
+                this.body_style.background = "yellow";
             }
-            else { this.menu_style.background = "#fafafa"; }
+            else {
+                this.select_option_default = "Select color";
+                this.menu_style.background = "#fafafa";
+                this.body_style.background = "#fff";
+            }
         }
     }
 });
